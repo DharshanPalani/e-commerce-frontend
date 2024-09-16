@@ -1,0 +1,140 @@
+/* General Container Styles */
+.container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Title Animations */
+.animated-title {
+  animation: fadeIn 2s ease-in-out;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.animated-subtitle {
+  animation: fadeIn 2s ease-in-out;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Form Animations */
+.animated-form {
+  animation: bounceIn 1s ease-out;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Animations */
+.animated-input-group {
+  animation: popIn 0.8s ease-out;
+}
+
+.animated-input {
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.animated-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 91, 255, 0.5);
+}
+
+/* Select Animations */
+.animated-select {
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.animated-select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 91, 255, 0.5);
+}
+
+/* Button Animations */
+.animated-button {
+  position: relative;
+  background: linear-gradient(45deg, #ff6f61, #de6161);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.animated-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+  transform: rotate(45deg);
+}
+
+.animated-button:hover::before {
+  left: 100%;
+  background: rgba(255, 255, 255, 0);
+}
+
+.animated-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #de6161, #ff6f61);
+}
+
+/* Loading Animation */
+.loading {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #007bff;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

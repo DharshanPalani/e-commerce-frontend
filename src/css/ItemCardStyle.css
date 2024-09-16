@@ -1,0 +1,26 @@
+.item-card-container{
+    border: 1px solid #1d405e;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    text-align: left;
+    max-width: 250px;
+    display: inline-block;
+    box-shadow: 5px 5px  hsla(215.76,23.53%,47.45%,1);
+    font-size: 18px;
+    
+    transition: 0.3s;
+}
+
+.product-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto;
+}
+
+.item-card-container:hover{
+    box-shadow: 10px 10px  hsla(215.76,23.53%,37.45%,1);
+}
+

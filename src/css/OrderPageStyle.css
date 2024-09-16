@@ -1,0 +1,122 @@
+/* OrderPageStyle.css */
+
+/* General Container Styles */
+.order-page-container {
+    padding: 20px;
+    background: linear-gradient(to right, #f3f4f6, #ffffff); /* Gradient background */
+    min-height: 100vh; /* Ensure full viewport height */
+    position: relative; /* For positioning the spinner */
+}
+
+/* Thank You Message Styles */
+.thank-you-message {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 20px; /* Add padding for better spacing */
+    background: #ffffff; /* White background for contrast */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+    border: 1px solid #ddd; /* Light border */
+    animation: fadeIn 1.5s ease-in-out, bounceIn 1s ease-out; /* Smooth fade-in and bounce animation */
+}
+
+/* Thank You Message Text Styles */
+.thank-you-message h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0056b3; /* Dark blue color for emphasis */
+    animation: colorChange 2s infinite alternate; /* Color change animation */
+}
+
+.thank-you-message p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Invoice Container Styles */
+.invoice-container {
+    width: 100%;
+    max-width: 1200px; /* Set a max-width for the container */
+    margin: 0 auto; /* Center horizontally */
+    background: #ffffff;
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    margin-top: 20px;
+    animation: slideIn 1.5s ease-out, scaleUp 1s ease-in-out; /* Slide-in and scale-up animation */
+}
+
+/* Invoice Styles */
+.invoice {
+    width: 100%;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    background: #f9f9f9; /* Slightly off-white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the invoice */
+}
+
+/* Loading Spinner Styles */
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #0056b3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes colorChange {
+    0% { color: #0056b3; }
+    100% { color: #003d7a; }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

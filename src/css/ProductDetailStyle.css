@@ -1,0 +1,169 @@
+.container.product-detail-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  animation: fade-in 1s ease-in-out;
+}
+
+.product-detail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.product-detail-image img {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  animation: slide-in-left 1s ease-in-out;
+}
+
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slide-in-right 1s ease-in-out;
+}
+
+.product-detail-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #343a40;
+  transition: color 0.3s ease;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #00d4ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s ease infinite;
+}
+
+.product-detail-description,
+.product-detail-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.product-detail-description h2,
+.product-detail-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #343a40;
+  transition: color 0.3s ease;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #00d4ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s ease infinite;
+}
+
+.product-detail-description p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  transition: color 0.3s ease;
+}
+
+.product-detail-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-detail-details li {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.product-detail-details li strong {
+  font-weight: bold;
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.buy-now-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #00c6ff, #0072ff, #00d4ff);
+  background-size: 200% 200%;
+  color: white;
+  cursor: pointer;
+  animation: gradient-animation 3s ease infinite;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buy-now-button:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buy-now-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  animation: none;
+}
+
+.product-detail-title:hover,
+.product-detail-description h2:hover,
+.product-detail-details h2:hover {
+  background: linear-gradient(45deg, #0072ff, #00c6ff, #00d4ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation-hover 3s ease infinite;
+}
+
+.product-detail-image img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-detail-details li:hover {
+  background: linear-gradient(45deg, #0072ff, #00c6ff, #00d4ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation-hover 3s ease infinite;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-animation-hover {
+  0% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
